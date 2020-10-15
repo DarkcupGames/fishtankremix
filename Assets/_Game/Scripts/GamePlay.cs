@@ -53,57 +53,57 @@ public class GamePlay : MonoBehaviour
 
     void Update()
     {
-        timeCount += Time.deltaTime;
+        //timeCount += Time.deltaTime;
 
-        if (timeCount > TIME_MONSTER_WAKEUP1 && status == "sleep")
-        {
-            status = "wake1";
-            popupConfirm.Show("QUÁI VẬT THỨC GIẤC", "Quái vật đã thức giấc, bạn có muốn feed nó 200 food??",
-                () =>
-                {
-                    if (!GamePlay.Instance.SpendMoney(200))
-                    {
-                        popupConfirm.Show("GAME OVER!", "Bạn không đủ food!! Cá của bạn sẽ bị ăn!!!");
-                    }
-                    else
-                    {
-                        popupConfirm.Hide();
-                    }
+        //if (timeCount > TIME_MONSTER_WAKEUP1 && status == "sleep")
+        //{
+        //    status = "wake1";
+        //    popupConfirm.Show("QUÁI VẬT THỨC GIẤC", "Quái vật đã thức giấc, bạn có muốn feed nó 200 food??",
+        //        () =>
+        //        {
+        //            if (!GamePlay.Instance.SpendMoney(200))
+        //            {
+        //                popupConfirm.Show("GAME OVER!", "Bạn không đủ food!! Cá của bạn sẽ bị ăn!!!");
+        //            }
+        //            else
+        //            {
+        //                popupConfirm.Hide();
+        //            }
                     
-                },
-                () =>
-                {
-                    popupConfirm.Show("Cá đã bị ăn","Một số cá của bạn đã chết vì quái vật ăn");
-                    if (listFish.Count > 0)
-                    {
-                        int index = UnityEngine.Random.Range(0, listFish.Count);
-                        Destroy(listFish[index]);
-                        listFish.RemoveAt(index);
-                    }
-                });
-        }
+        //        },
+        //        () =>
+        //        {
+        //            popupConfirm.Show("Cá đã bị ăn","Một số cá của bạn đã chết vì quái vật ăn");
+        //            if (listFish.Count > 0)
+        //            {
+        //                int index = UnityEngine.Random.Range(0, listFish.Count);
+        //                Destroy(listFish[index]);
+        //                listFish.RemoveAt(index);
+        //            }
+        //        });
+        //}
 
-        if (timeCount > TIME_MONSTER_WAKEUP2 && status == "wake1")
-        {
-            status = "wake2";
-            popupConfirm.Show("QUÁI VẬT THỨC GIẤC", "Quái vật đã thức giấc, bạn có muốn feed nó 1000 food??",
-                () =>
-                {
-                    popupConfirm.Hide();
-                },
-                () =>
-                {
-                    popupConfirm.Show("Cá đã bị ăn", "Một số cá của bạn đã chết vì quái vật ăn");
-                    if (listFish.Count > 0)
-                    {
-                        int index = UnityEngine.Random.Range(0, listFish.Count);
-                        Destroy(listFish[index]);
-                        listFish.RemoveAt(index);
-                    }
-                });
-        }
+        //if (timeCount > TIME_MONSTER_WAKEUP2 && status == "wake1")
+        //{
+        //    status = "wake2";
+        //    popupConfirm.Show("QUÁI VẬT THỨC GIẤC", "Quái vật đã thức giấc, bạn có muốn feed nó 1000 food??",
+        //        () =>
+        //        {
+        //            popupConfirm.Hide();
+        //        },
+        //        () =>
+        //        {
+        //            popupConfirm.Show("Cá đã bị ăn", "Một số cá của bạn đã chết vì quái vật ăn");
+        //            if (listFish.Count > 0)
+        //            {
+        //                int index = UnityEngine.Random.Range(0, listFish.Count);
+        //                Destroy(listFish[index]);
+        //                listFish.RemoveAt(index);
+        //            }
+        //        });
+        //}
 
-        money += Time.deltaTime;
+        //money += Time.deltaTime;
     }
 
     public void AddMoney(float amount) {
@@ -160,4 +160,30 @@ public class GamePlay : MonoBehaviour
         action.Invoke();
         StartCoroutine(DoFunctionLoopCoroutine(sec, action));
     }
+
+    public static string GetRandomId(int length)
+    {
+        string s = "0123456789abcdefghijklmnopqrstuvwxABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        string result = "";
+        for (int i = 0; i < length; i++)
+        {
+            result += s[UnityEngine.Random.Range(0, s.Length)];
+        }
+        return result;
+    }
 }
+
+
+//private var characters : String = "0123456789abcdefghijklmnopqrstuvwxABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+//function Start()
+//{
+//    var code : String = "";
+
+//for (var i : int = 0; i < 20; i++) {
+//    var a : int = Random.Range(0, characters.length);
+//    code = code + characters[a];
+//}
+
+//Debug.Log(code);
+// }

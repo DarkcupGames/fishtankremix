@@ -3,18 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Utf8Json;
+//using Newtonsoft.Json.Linq.JObject;
 
 public class ServerSystem : MonoBehaviour
 {
     public static string SERVER_URL = "ws://fishtankserver.herokuapp.com/ws";
     public static ServerSystem Instance;
+
+    public static ClientData client;
     public static Dictionary<string, SyncPosition> dic;
+
     public static bool sendRequest = false;
     public static string playerid;
 
     public Joystick joystick;
     public GameObject player;
     public float speed = 4f;
+    public CameraFollower cameraFollower;
 
     WebSocket websocket;
 
@@ -23,13 +29,24 @@ public class ServerSystem : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         dic = new Dictionary<string, SyncPosition>();
-        OnlineData data = new OnlineData();
+        client = new ClientData();
+
+        // Create player
+        ClientObject data = new ClientObject();
         data.id = playerid;
         data.desirePos = player.transform.position;
         data.speed = 4f;
+        data.owner = playerid;
+
+        GameObject spawn = Resources.Load<GameObject>("player") as GameObject;
+        GameObject go = Instantiate(spawn, new Vector3(0,0), Quaternion.identity);
+        player = go;
         player.GetComponent<SyncPosition>().data = data;
         player.transform.GetChild(0).GetComponent<TextMeshPro>().text = playerid;
         dic.Add(playerid, player.GetComponent<SyncPosition>());
+        client.objects.Add(player.GetComponent<SyncPosition>().data);
+
+        cameraFollower.target = player;
     }
 
     async void Start()
@@ -51,39 +68,55 @@ public class ServerSystem : MonoBehaviour
             Debug1.Log("Connection closed!");
         };
 
-        websocket.OnMessage += (bytes) =>
-        {
-            var message = System.Text.Encoding.UTF8.GetString(bytes);
-
-            OnlineData sync = JsonUtility.FromJson<OnlineData>(message);
-
-            if (!dic.ContainsKey(sync.id))
-            {
-                GameObject go = Instantiate(player, sync.desirePos, Quaternion.identity);
-                var comp = go.GetComponent<SyncPosition>().data;
-                comp.id = sync.id;
-                comp.desirePos = sync.desirePos;
-                comp.state = sync.state;
-                comp.speed = sync.speed;
-
-                go.transform.GetChild(0).GetComponent<TextMeshPro>().text = sync.id;
-
-                dic.Add(sync.id, go.GetComponent<SyncPosition>());
-            }
-            else
-            {
-                if (sync.id != playerid)
-                {
-                    dic[sync.id].data.desirePos = sync.desirePos;
-                    dic[sync.id].data.state = sync.state;
-                }
-                    
-            }
-        };
+        websocket.OnMessage += ReveiMessage;
 
         InvokeRepeating("SendWebSocketMessage", 0.0f, 0.3f);
 
         await websocket.Connect();
+    }
+
+    public void ReveiMessage(byte[] bytes)
+    {
+        ClientData data = JsonSerializer.Deserialize<ClientData>(bytes);
+
+        //var message = System.Text.Encoding.UTF8.GetString(bytes);
+        //Debug.Log(message);
+
+        //ClientData data = JsonUtility.FromJson<ClientData>(message);
+
+        for (int i = 0; i < data.objects.Count; i++)
+        {
+            ClientObject obj = data.objects[i];
+
+            if (obj.owner == playerid)
+                continue;
+
+            if (!dic.ContainsKey(obj.id))
+            {
+                GameObject spawn = Resources.Load<GameObject>(obj.objectName) as GameObject;
+                GameObject go = Instantiate(spawn, obj.desirePos, Quaternion.identity);
+                var comp = go.GetComponent<SyncPosition>().data;
+                comp.id = obj.id;
+                comp.desirePos = obj.desirePos;
+                comp.state = obj.state;
+                comp.speed = obj.speed;
+
+                go.transform.GetChild(0).GetComponent<TextMeshPro>().text = obj.id;
+
+                dic.Add(obj.id, go.GetComponent<SyncPosition>());
+            }
+            else
+            {
+                //if (obj.owner != playerid)
+                //{
+
+                //}
+
+                dic[obj.id].data.desirePos = obj.desirePos;
+                dic[obj.id].data.state = obj.state;
+                //Debug.Log("desirePos: " + obj.desirePos);
+            }
+        }
     }
 
     void Update()
@@ -91,6 +124,16 @@ public class ServerSystem : MonoBehaviour
 #if !UNITY_WEBGL || UNITY_EDITOR
         websocket.DispatchMessageQueue();
 #endif
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Debug.Log(JsonUtility.ToJson(client));
+            foreach (KeyValuePair<string,SyncPosition> item in dic)
+            {
+                Debug.Log("dic " + item.Key);
+            }
+        }
+            
 
         if (!sendRequest)
             return;
@@ -106,8 +149,8 @@ public class ServerSystem : MonoBehaviour
                 dic[playerid].data.state = "walk";
                 Vector3 pos = new Vector3(joystick.Horizontal, joystick.Vertical).normalized * 4f * Time.deltaTime;
 
-                dic[playerid].transform.position += pos;
-                dic[playerid].data.desirePos = dic[playerid].transform.position;
+                player.transform.position += pos;
+                //dic[playerid].data.desirePos = dic[playerid].transform.position;
             }
         }
     }
@@ -119,7 +162,9 @@ public class ServerSystem : MonoBehaviour
 
         if (websocket.State == WebSocketState.Open)
         {
-            await websocket.SendText(JsonUtility.ToJson(dic[playerid].data));
+            //string json = ;
+            //await websocket.SendText(JsonUtility.ToJson(client));
+            await websocket.Send(JsonSerializer.Serialize<ClientData>(client));
         }
     }
 
@@ -127,4 +172,11 @@ public class ServerSystem : MonoBehaviour
     {
         await websocket.Close();
     }
+
+    //public void ExecuteCommand(string str)
+    //{
+    //    JObject json = JObject.Parse(str);
+    //    if (json.HasValues())
+    //    var content = json[""]
+    //}
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

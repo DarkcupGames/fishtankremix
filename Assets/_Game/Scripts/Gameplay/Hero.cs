@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Hero : MonoBehaviour
 {
@@ -34,6 +35,10 @@ public class Hero : MonoBehaviour
             GamePlay.Instance.SetTextDelay(txtStatus, "", 2f);
         }
 
+        //if (GetComponent<SyncPosition>().data.id == ServerSystem.playerid)
+        //    GetComponent<SyncPosition>().data.desirePos = transform.position;
+        //ServerSystem.dic[ServerSystem.playerid].da
+
         if (state == "create_fish")
             return;
 
@@ -63,10 +68,10 @@ public class Hero : MonoBehaviour
 
     public void CreateFish(GameObject fish)
     {
-        float money = fish.GetComponent<Fish>().fishData.SHOP_VALUE;
+        //float money = fish.GetComponent<Fish>().fishData.SHOP_VALUE;
 
-        if (GamePlay.Instance.SpendMoney(money))
-            StartCoroutine(CreateFishCoroutine(fish));
+        //if (GamePlay.Instance.SpendMoney(money))
+        StartCoroutine(CreateFishCoroutine(fish));
     }
 
     public IEnumerator CreateFishCoroutine(GameObject fish)
@@ -78,6 +83,12 @@ public class Hero : MonoBehaviour
         Destroy(effect);
         GetComponent<DAnimator>().spritesheet = anim_normal;
         GameObject go = Instantiate(fish, transform.position + new Vector3(0, 1f), Quaternion.identity);
+        ClientObject obj = new ClientObject();
+
+        go.GetComponent<SyncPosition>().data.id = GamePlay.GetRandomId(10);
+        go.GetComponent<SyncPosition>().data.owner = ServerSystem.playerid;
+        ServerSystem.client.objects.Add(go.GetComponent<SyncPosition>().data);
+
         state = "normal";
     }
 

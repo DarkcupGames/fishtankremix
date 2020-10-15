@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+//using System.Text.Json;
 
 public class FishNormal : Fish
 {
@@ -9,6 +10,7 @@ public class FishNormal : Fish
     public GameObject ghost;
     public Sprite[] normalSheet;
     public Sprite[] attackedSheet;
+    public SyncPosition sync;
 
     public GameObject eat;
 
@@ -38,6 +40,7 @@ public class FishNormal : Fish
     void Start()
     {
         GetComponent<DAnimator>().spritesheet = normalSheet;
+        sync = GetComponent<SyncPosition>();
         vRange = Random.Range(-MAX_SPEED, MAX_SPEED);
         movetime = Random.Range(4f, 12f);
         hp = 1f;
@@ -54,37 +57,44 @@ public class FishNormal : Fish
     {
         timeCount += Time.deltaTime;
 
-        //if (timeCount > timeStatus)
+        if (sync.data.owner != ServerSystem.playerid)
+        {
+            // get data here
+            state = sync.data.state;
+            movespeed = sync.data.speed;
+
+            //if (sync.data.desirePos.x > transform.position.x)
+            //    GetComponent<SpriteRenderer>().flipX = false;
+            //else
+            //    GetComponent<SpriteRenderer>().flipX = true;
+            // sync state
+            // do something here
+            return;
+        }
+        else
+        {
+            // send data here
+            sync.data.state = state;
+            sync.data.speed = movespeed;
+            sync.data.desirePos = transform.position;
+        }
+
+        //if (timeCount > timeHunger && state != "hungry")
         //{
-        //    timeStatus += Random.Range(5f, 10f);
+        //    txtStatus.text = "hungry!";
+        //    state = "hungry";
 
-        //    List<string> comments = new List<string>() { "I'm hungry", "Happy <3", "I need friend with benefit!", "I'm fish!", "I'm scared!" };
-        //    txtStatus.text = comments[Random.Range(0, comments.Count)];
-
-        //    GamePlay.Instance.SetTextDelay(txtStatus, "", 2f);
+        //    if (eat == null)
+        //        eat = GameObject.FindGameObjectWithTag("Grass");
         //}
 
-        if (timeCount > timeHunger && state != "hungry")
-        {
-            txtStatus.text = "hungry!";
-            state = "hungry";
-
-            if (eat == null)
-                eat = GameObject.FindGameObjectWithTag("Grass");
-        }
-
-        if (timeCount > timeDie && state == "hungry")
-        {
-            //txtStatus.text = "die hunger!";
-            //state = "die";
-
-            //if (eat == null)
-            //    eat = GameObject.FindGameObjectWithTag("Grass");
-            state = "dead";
-            GameObject go = Instantiate(ghost, transform.position, Quaternion.identity);
-            GamePlay.Instance.DestroyDelay(go, 1f);
-            Destroy(gameObject);
-        }
+        //if (timeCount > timeDie && state == "hungry")
+        //{
+        //    state = "dead";
+        //    GameObject go = Instantiate(ghost, transform.position, Quaternion.identity);
+        //    GamePlay.Instance.DestroyDelay(go, 1f);
+        //    Destroy(gameObject);
+        //}
 
         if (timeCount > TIME_GROW1 && size == "small")
         {
@@ -171,17 +181,17 @@ public class FishNormal : Fish
         else
             GetComponent<Transform>().position += new Vector3(movespeed, vRange, 0) * Time.deltaTime;
 
-        if (state == "hurt")
-        {
-            hp -= Time.deltaTime;
-            if (hp <= 0 && state != "dead")
-            {
-                state = "dead";
-                GameObject go = Instantiate(ghost, transform.position, Quaternion.identity);
-                GamePlay.Instance.DestroyDelay(go, 1f);
-                Destroy(gameObject);
-            }
-        }
+        //if (state == "hurt")
+        //{
+        //    hp -= Time.deltaTime;
+        //    if (hp <= 0 && state != "dead")
+        //    {
+        //        state = "dead";
+        //        GameObject go = Instantiate(ghost, transform.position, Quaternion.identity);
+        //        GamePlay.Instance.DestroyDelay(go, 1f);
+        //        Destroy(gameObject);
+        //    }
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
