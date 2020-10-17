@@ -143,6 +143,7 @@
     <Compile Include="Assets\_Game\Scripts\Gameplay\FishStat.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\Grass.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\Hero.cs" />
+    <Compile Include="Assets\_Game\Scripts\Gameplay\Player.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\PopupConfirm.cs" />
     <Compile Include="Assets\_Game\Scripts\Login\Login.cs" />
     <Compile Include="Assets\_Game\Scripts\Server\ClientData.cs" />

@@ -83,11 +83,11 @@ public class Hero : MonoBehaviour
         Destroy(effect);
         GetComponent<DAnimator>().spritesheet = anim_normal;
         GameObject go = Instantiate(fish, transform.position + new Vector3(0, 1f), Quaternion.identity);
-        ClientObject obj = new ClientObject();
 
-        go.GetComponent<SyncPosition>().data.id = GamePlay.GetRandomId(10);
-        go.GetComponent<SyncPosition>().data.owner = ServerSystem.playerid;
-        ServerSystem.client.objects.Add(go.GetComponent<SyncPosition>().data);
+        //ClientObject obj = new ClientObject();
+        //go.GetComponent<SyncPosition>().data.id = GamePlay.GetRandomId(10);
+        //go.GetComponent<SyncPosition>().data.owner = ServerSystem.playerid;
+        //ServerSystem.client.objects.Add(go.GetComponent<SyncPosition>().data);
 
         state = "normal";
     }

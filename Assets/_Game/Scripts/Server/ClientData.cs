@@ -5,14 +5,18 @@ using UnityEngine;
 [System.Serializable]
 public class ClientData
 {
-    public List<ClientObject> objects;
-    public Dictionary<string, string> commands;
+    public string id;
+    public Vector3 p; // position
+    public string s; // state
 
-    public ClientData()
-    {
-        objects = new List<ClientObject>();
-        commands = new Dictionary<string, string>();
-    }
+    //public List<ClientObject> objects;
+    //public Dictionary<string, string> commands;
+
+    //public ClientData()
+    //{
+    //    objects = new List<ClientObject>();
+    //    commands = new Dictionary<string, string>();
+    //}
 
     //private void Update()
     //{

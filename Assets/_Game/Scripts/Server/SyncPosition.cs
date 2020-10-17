@@ -4,27 +4,39 @@ using UnityEngine;
 
 public class SyncPosition : MonoBehaviour
 {
-    public ClientObject data;
+    public ClientData data;
+    public float speed = 4f;
 
     private void Start()
     {
         if (data == null)
-            data = new ClientObject();
+            data = new ClientData();
     }
 
     private void Update()
     {
-        if (data.owner == ServerSystem.playerid)
+        if (data.id == ServerSystem.playerid)
         {
-            data.desirePos = transform.position;
-            return;
+            //data.p = transform.position;
+            //data.s = "somestate"; // change here
+        }
+        else
+        {
+            //Vector3 pos = data.p - transform.position;
+            //transform.position += pos.normalized * speed * Time.deltaTime;
         }
 
-        if (data.state == "stand")
-            return;
+        //if (data.owner == ServerSystem.playerid)
+        //{
+        //    data.desirePos = transform.position;
+        //    return;
+        //}
 
-        Vector3 pos = data.desirePos - transform.position;
-        transform.position += pos.normalized * data.speed * Time.deltaTime;
+        //if (data.state == "stand")
+        //    return;
+
+        //Vector3 pos = data.desirePos - transform.position;
+        //transform.position += pos.normalized * data.speed * Time.deltaTime;
         
     }
 }

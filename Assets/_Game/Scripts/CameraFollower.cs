@@ -25,7 +25,7 @@ public class CameraFollower : MonoBehaviour
         Instance = this;
     }
 
-    void Update()
+    void LateUpdate()
     {
         float distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
 

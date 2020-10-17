@@ -30,21 +30,28 @@ public class ServerSystem : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         dic = new Dictionary<string, SyncPosition>();
         client = new ClientData();
-
+        client.id = playerid;
+        client.p = player.transform.position;
+        client.s = "stand";
         // Create player
-        ClientObject data = new ClientObject();
-        data.id = playerid;
-        data.desirePos = player.transform.position;
-        data.speed = 4f;
-        data.owner = playerid;
+        //ClientObject data = new ClientObject();
+        //data.id = playerid;
+        //data.desirePos = player.transform.position;
+        //data.speed = 4f;
+        //data.owner = playerid;
+
 
         GameObject spawn = Resources.Load<GameObject>("player") as GameObject;
         GameObject go = Instantiate(spawn, new Vector3(0,0), Quaternion.identity);
         player = go;
-        player.GetComponent<SyncPosition>().data = data;
+        player.GetComponent<SyncPosition>().data = client;
         player.transform.GetChild(0).GetComponent<TextMeshPro>().text = playerid;
         dic.Add(playerid, player.GetComponent<SyncPosition>());
-        client.objects.Add(player.GetComponent<SyncPosition>().data);
+
+        Vector3 pos = player.transform.position;
+        Camera.main.transform.position = new Vector3(pos.x, pos.y, Camera.main.transform.position.z);
+        Camera.main.transform.SetParent(player.transform);
+        //client.objects.Add(player.GetComponent<SyncPosition>().data);
 
         cameraFollower.target = player;
     }
@@ -77,53 +84,65 @@ public class ServerSystem : MonoBehaviour
 
     public void ReveiMessage(byte[] bytes)
     {
+        /*
         ClientData data = JsonSerializer.Deserialize<ClientData>(bytes);
 
         //var message = System.Text.Encoding.UTF8.GetString(bytes);
         //Debug.Log(message);
 
         //ClientData data = JsonUtility.FromJson<ClientData>(message);
+        if (data.id == playerid)
+            return;
 
-        for (int i = 0; i < data.objects.Count; i++)
+        if (!dic.ContainsKey(data.id))
         {
-            ClientObject obj = data.objects[i];
-
-            if (obj.owner == playerid)
-                continue;
-
-            if (!dic.ContainsKey(obj.id))
-            {
-                GameObject spawn = Resources.Load<GameObject>(obj.objectName) as GameObject;
-                GameObject go = Instantiate(spawn, obj.desirePos, Quaternion.identity);
-                var comp = go.GetComponent<SyncPosition>().data;
-                comp.id = obj.id;
-                comp.desirePos = obj.desirePos;
-                comp.state = obj.state;
-                comp.speed = obj.speed;
-
-                go.transform.GetChild(0).GetComponent<TextMeshPro>().text = obj.id;
-
-                dic.Add(obj.id, go.GetComponent<SyncPosition>());
-            }
-            else
-            {
-                //if (obj.owner != playerid)
-                //{
-
-                //}
-
-                dic[obj.id].data.desirePos = obj.desirePos;
-                dic[obj.id].data.state = obj.state;
-                //Debug.Log("desirePos: " + obj.desirePos);
-            }
+            GameObject spawn = Resources.Load<GameObject>("player") as GameObject;
+            GameObject go = Instantiate(spawn, data.p, Quaternion.identity);
+            go.GetComponent<SyncPosition>().data = data;
+            //sync = data;
         }
+
+        //for (int i = 0; i < data.objects.Count; i++)
+        //{
+        //    ClientObject obj = data.objects[i];
+
+        //    if (obj.owner == playerid)
+        //        continue;
+
+        //    if (!dic.ContainsKey(obj.id))
+        //    {
+        //        GameObject spawn = Resources.Load<GameObject>(obj.objectName) as GameObject;
+        //        GameObject go = Instantiate(spawn, obj.desirePos, Quaternion.identity);
+        //        var comp = go.GetComponent<SyncPosition>().data;
+        //        comp.id = obj.id;
+        //        comp.desirePos = obj.desirePos;
+        //        comp.state = obj.state;
+        //        comp.speed = obj.speed;
+
+        //        go.transform.GetChild(0).GetComponent<TextMeshPro>().text = obj.id;
+
+        //        dic.Add(obj.id, go.GetComponent<SyncPosition>());
+        //    }
+        //    else
+        //    {
+        //        //if (obj.owner != playerid)
+        //        //{
+
+        //        //}
+
+        //        dic[obj.id].data.desirePos = obj.desirePos;
+        //        dic[obj.id].data.state = obj.state;
+        //        //Debug.Log("desirePos: " + obj.desirePos);
+        //    }
+        //}
+        */
     }
 
     void Update()
     {
-#if !UNITY_WEBGL || UNITY_EDITOR
-        websocket.DispatchMessageQueue();
-#endif
+//#if !UNITY_WEBGL || UNITY_EDITOR
+//        websocket.DispatchMessageQueue();
+//#endif
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
@@ -142,14 +161,15 @@ public class ServerSystem : MonoBehaviour
         {
             if (joystick.Horizontal == 0 && joystick.Vertical == 0)
             {
-                dic[playerid].data.state = "stand";
+                dic[playerid].data.s = "stand";
             }
             else
             {
-                dic[playerid].data.state = "walk";
-                Vector3 pos = new Vector3(joystick.Horizontal, joystick.Vertical).normalized * 4f * Time.deltaTime;
+                //dic[playerid].data.s = "walk";
+                //Vector3 pos = new Vector3(joystick.Horizontal, joystick.Vertical).normalized * 4f * Time.deltaTime;
 
-                player.transform.position += pos;
+                //player.transform.position += pos;
+                //player.GetComponent<Rigidbody2D>().velocity = new Vector3(joystick.Horizontal, joystick.Vertical);
                 //dic[playerid].data.desirePos = dic[playerid].transform.position;
             }
         }

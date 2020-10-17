@@ -57,27 +57,27 @@ public class FishNormal : Fish
     {
         timeCount += Time.deltaTime;
 
-        if (sync.data.owner != ServerSystem.playerid)
-        {
-            // get data here
-            state = sync.data.state;
-            movespeed = sync.data.speed;
+        //if (sync.data.owner != ServerSystem.playerid)
+        //{
+        //    // get data here
+        //    state = sync.data.state;
+        //    movespeed = sync.data.speed;
 
-            //if (sync.data.desirePos.x > transform.position.x)
-            //    GetComponent<SpriteRenderer>().flipX = false;
-            //else
-            //    GetComponent<SpriteRenderer>().flipX = true;
-            // sync state
-            // do something here
-            return;
-        }
-        else
-        {
-            // send data here
-            sync.data.state = state;
-            sync.data.speed = movespeed;
-            sync.data.desirePos = transform.position;
-        }
+        //    //if (sync.data.desirePos.x > transform.position.x)
+        //    //    GetComponent<SpriteRenderer>().flipX = false;
+        //    //else
+        //    //    GetComponent<SpriteRenderer>().flipX = true;
+        //    // sync state
+        //    // do something here
+        //    return;
+        //}
+        //else
+        //{
+        //    // send data here
+        //    sync.data.state = state;
+        //    sync.data.speed = movespeed;
+        //    sync.data.desirePos = transform.position;
+        //}
 
         //if (timeCount > timeHunger && state != "hungry")
         //{
