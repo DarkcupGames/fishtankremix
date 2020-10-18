@@ -27,6 +27,9 @@ public class CameraFollower : MonoBehaviour
 
     void LateUpdate()
     {
+        if (target == null)
+            return;
+
         float distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
 
         //if (distanceToPivot > MAX_SHOOT_RADIUS)

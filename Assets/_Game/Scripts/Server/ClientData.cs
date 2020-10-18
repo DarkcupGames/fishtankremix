@@ -7,6 +7,7 @@ public class ClientData
 {
     public string id;
     public Vector3 p; // position
+    public Vector3 v; // velocity
     public string s; // state
 
     //public List<ClientObject> objects;

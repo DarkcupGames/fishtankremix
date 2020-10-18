@@ -14,9 +14,10 @@ ScriptsOnlyBuild:
     - Grass
     - Hero
     - Login
+    - Player
     - PopupConfirm
     - ServerSystem
-    - SyncPosition
+    - SortingOrderFixer
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
     Unity.2D.Animation.Editor.dll:
@@ -67,10 +68,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 50
@@ -88,55 +85,57 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11292}
     - Class: 114
-      Script: {instanceID: 11890}
+      Script: {instanceID: 11910}
     - Class: 114
-      Script: {instanceID: 12170}
+      Script: {instanceID: 12194}
     - Class: 114
-      Script: {instanceID: 12378}
+      Script: {instanceID: 12402}
     - Class: 114
-      Script: {instanceID: 12440}
+      Script: {instanceID: 12468}
     - Class: 114
-      Script: {instanceID: 12590}
+      Script: {instanceID: 12624}
     - Class: 114
-      Script: {instanceID: 12794}
+      Script: {instanceID: 12842}
     - Class: 114
-      Script: {instanceID: 12872}
+      Script: {instanceID: 12924}
     - Class: 114
-      Script: {instanceID: 12910}
+      Script: {instanceID: 12962}
     - Class: 114
-      Script: {instanceID: 13036}
+      Script: {instanceID: 13094}
     - Class: 114
-      Script: {instanceID: 13056}
+      Script: {instanceID: 13114}
     - Class: 114
-      Script: {instanceID: 13142}
+      Script: {instanceID: 13204}
     - Class: 114
-      Script: {instanceID: 13436}
+      Script: {instanceID: 13534}
     - Class: 114
-      Script: {instanceID: 13468}
+      Script: {instanceID: 13572}
     - Class: 114
-      Script: {instanceID: 13506}
+      Script: {instanceID: 13576}
     - Class: 114
-      Script: {instanceID: 13510}
+      Script: {instanceID: 13606}
     - Class: 114
-      Script: {instanceID: 13538}
+      Script: {instanceID: 13678}
     - Class: 114
-      Script: {instanceID: 13608}
+      Script: {instanceID: 13924}
     - Class: 114
-      Script: {instanceID: 13846}
+      Script: {instanceID: 13958}
     - Class: 114
-      Script: {instanceID: 13878}
+      Script: {instanceID: 14044}
     - Class: 114
-      Script: {instanceID: 13956}
+      Script: {instanceID: 14284}
     - Class: 114
-      Script: {instanceID: 14190}
+      Script: {instanceID: 14526}
     - Class: 114
-      Script: {instanceID: 14422}
+      Script: {instanceID: 14724}
     - Class: 114
-      Script: {instanceID: 14612}
+      Script: {instanceID: 14770}
     - Class: 114
-      Script: {instanceID: 14654}
+      Script: {instanceID: 14818}
     - Class: 114
-      Script: {instanceID: 29942}
+      Script: {instanceID: 15852}
+    - Class: 114
+      Script: {instanceID: 20922}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -172,6 +171,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
     - Class: 58
       Script: {instanceID: 0}
     - Class: 81
@@ -183,47 +184,51 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11292}
     - Class: 114
-      Script: {instanceID: 11720}
+      Script: {instanceID: 11446}
     - Class: 114
-      Script: {instanceID: 11868}
+      Script: {instanceID: 11740}
     - Class: 114
-      Script: {instanceID: 12018}
+      Script: {instanceID: 11888}
     - Class: 114
-      Script: {instanceID: 12378}
+      Script: {instanceID: 12040}
     - Class: 114
-      Script: {instanceID: 12436}
+      Script: {instanceID: 12402}
     - Class: 114
-      Script: {instanceID: 12910}
+      Script: {instanceID: 12464}
     - Class: 114
-      Script: {instanceID: 12982}
+      Script: {instanceID: 12962}
     - Class: 114
-      Script: {instanceID: 13056}
+      Script: {instanceID: 13038}
     - Class: 114
-      Script: {instanceID: 13070}
+      Script: {instanceID: 13114}
     - Class: 114
-      Script: {instanceID: 13142}
+      Script: {instanceID: 13132}
     - Class: 114
-      Script: {instanceID: 13436}
+      Script: {instanceID: 13204}
     - Class: 114
-      Script: {instanceID: 13468}
+      Script: {instanceID: 13534}
     - Class: 114
-      Script: {instanceID: 13510}
+      Script: {instanceID: 13576}
     - Class: 114
-      Script: {instanceID: 13530}
+      Script: {instanceID: 13598}
     - Class: 114
-      Script: {instanceID: 13846}
+      Script: {instanceID: 13924}
     - Class: 114
-      Script: {instanceID: 13878}
+      Script: {instanceID: 13958}
     - Class: 114
-      Script: {instanceID: 13956}
+      Script: {instanceID: 14044}
     - Class: 114
-      Script: {instanceID: 14190}
+      Script: {instanceID: 14284}
     - Class: 114
-      Script: {instanceID: 14250}
+      Script: {instanceID: 14346}
     - Class: 114
-      Script: {instanceID: 14422}
+      Script: {instanceID: 14526}
     - Class: 114
-      Script: {instanceID: 14612}
+      Script: {instanceID: 14724}
+    - Class: 114
+      Script: {instanceID: 15852}
+    - Class: 114
+      Script: {instanceID: 20922}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -279,6 +284,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 488cc5b567a94d179b307bee925d4c76
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -635,12 +646,6 @@ ScriptsOnlyBuild:
     className: SpriteSkin
   - hash:
       serializedVersion: 2
-      Hash: a489676e185e5eb3e5bd7b0c8ab223b1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SyncPosition
-  - hash:
-      serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -755,7 +760,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 4a14afff127a4a9474d0839367c6f579
+      Hash: f3af2ac6e8ea913aca235f75125ec59b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FishNormal
@@ -875,18 +880,24 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: 20c25a4030baaeda631c8ac10c00d105
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraFollower
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 20c25a4030baaeda631c8ac10c00d105
+      Hash: 284f5d9bdaed2e2fa4d300ea0adcd718
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: CameraFollower
+    className: SortingOrderFixer
   platform: 13
   scenePathNames:
   - Assets/_Game/Scenes/Login.unity
   - Assets/_Game/Scenes/Gameplay.unity
-  playerPath: C:/Users/Admin/Desktop/utf8jsonnnnn.apk
+  playerPath: C:/Users/Admin/Desktop/aaaaaaaaaaaaaaaaaa.apk

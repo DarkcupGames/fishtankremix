@@ -10,7 +10,7 @@ public class FishNormal : Fish
     public GameObject ghost;
     public Sprite[] normalSheet;
     public Sprite[] attackedSheet;
-    public SyncPosition sync;
+    //public SyncPosition sync;
 
     public GameObject eat;
 
@@ -39,18 +39,18 @@ public class FishNormal : Fish
 
     void Start()
     {
-        GetComponent<DAnimator>().spritesheet = normalSheet;
-        sync = GetComponent<SyncPosition>();
-        vRange = Random.Range(-MAX_SPEED, MAX_SPEED);
-        movetime = Random.Range(4f, 12f);
-        hp = 1f;
+        //GetComponent<DAnimator>().spritesheet = normalSheet;
+        //sync = GetComponent<SyncPosition>();
+        //vRange = Random.Range(-MAX_SPEED, MAX_SPEED);
+        //movetime = Random.Range(4f, 12f);
+        //hp = 1f;
 
-        txtStatus.text = "";
-        timeCount = 0f;
-        timeHunger = TIME_HUNGER;
-        timeDie = TIME_DIE;
+        //txtStatus.text = "";
+        //timeCount = 0f;
+        //timeHunger = TIME_HUNGER;
+        //timeDie = TIME_DIE;
 
-        transform.localScale = new Vector3(SIZE_SMALL, SIZE_SMALL);
+        //transform.localScale = new Vector3(SIZE_SMALL, SIZE_SMALL);
     }
 
     void Update()

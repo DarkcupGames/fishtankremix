@@ -146,12 +146,13 @@
     <Compile Include="Assets\_Game\Scripts\Gameplay\Player.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\PopupConfirm.cs" />
     <Compile Include="Assets\_Game\Scripts\Login\Login.cs" />
+    <Compile Include="Assets\_Game\Scripts\OpenSceneEditor.cs" />
     <Compile Include="Assets\_Game\Scripts\Server\ClientData.cs" />
     <Compile Include="Assets\_Game\Scripts\Server\ClientObject.cs" />
     <Compile Include="Assets\_Game\Scripts\Server\Connection.cs" />
     <Compile Include="Assets\_Game\Scripts\Server\ServerSystem.cs" />
-    <Compile Include="Assets\_Game\Scripts\Server\SyncPosition.cs" />
     <Compile Include="Assets\_Game\Scripts\Server\WebSocket\WebSocket.cs" />
+    <Compile Include="Assets\_Game\Scripts\SortingOrderFixer.cs" />
     <Compile Include="Assets\websocket-sharp\AssemblyInfo.cs" />
     <Compile Include="Assets\websocket-sharp\ByteOrder.cs" />
     <Compile Include="Assets\websocket-sharp\CloseEventArgs.cs" />
