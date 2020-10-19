@@ -52,137 +52,137 @@ public class FishSail : Fish
 
     void Update()
     {
-        timeCount += Time.deltaTime;
+        //timeCount += Time.deltaTime;
 
-        //if (timeCount > timeStatus)
+        ////if (timeCount > timeStatus)
+        ////{
+        ////    timeStatus += Random.Range(5f, 10f);
+
+        ////    List<string> comments = new List<string>() { "I'm hungry", "Happy <3", "I need friend with benefit!", "I'm fish!", "I'm scared!" };
+        ////    txtStatus.text = comments[Random.Range(0, comments.Count)];
+
+        ////    GamePlay.Instance.SetTextDelay(txtStatus, "", 2f);
+        ////}
+
+        //if (timeCount > timeHunger && state != "hungry")
         //{
-        //    timeStatus += Random.Range(5f, 10f);
+        //    txtStatus.text = "hungry!";
+        //    state = "hungry";
 
-        //    List<string> comments = new List<string>() { "I'm hungry", "Happy <3", "I need friend with benefit!", "I'm fish!", "I'm scared!" };
-        //    txtStatus.text = comments[Random.Range(0, comments.Count)];
-
-        //    GamePlay.Instance.SetTextDelay(txtStatus, "", 2f);
+        //    if (eat == null)
+        //        eat = GameObject.FindGameObjectWithTag("Fish1");
         //}
 
-        if (timeCount > timeHunger && state != "hungry")
-        {
-            txtStatus.text = "hungry!";
-            state = "hungry";
+        //if (timeCount > timeDie && state == "hungry")
+        //{
+        //    //txtStatus.text = "die hunger!";
+        //    //state = "die";
 
-            if (eat == null)
-                eat = GameObject.FindGameObjectWithTag("Fish1");
-        }
+        //    //if (eat == null)
+        //    //    eat = GameObject.FindGameObjectWithTag("Grass");
+        //    state = "dead";
+        //    GameObject go = Instantiate(ghost, transform.position, Quaternion.identity);
+        //    GamePlay.Instance.DestroyDelay(go, 1f);
+        //    Destroy(gameObject);
+        //}
 
-        if (timeCount > timeDie && state == "hungry")
-        {
-            //txtStatus.text = "die hunger!";
-            //state = "die";
+        //if (timeCount > TIME_GROW1 && size == "small")
+        //{
+        //    size = "medium";
+        //    transform.localScale = new Vector3(SIZE_MEDIUM, SIZE_MEDIUM);
+        //}
 
-            //if (eat == null)
-            //    eat = GameObject.FindGameObjectWithTag("Grass");
-            state = "dead";
-            GameObject go = Instantiate(ghost, transform.position, Quaternion.identity);
-            GamePlay.Instance.DestroyDelay(go, 1f);
-            Destroy(gameObject);
-        }
+        //if (timeCount > TIME_GROW2 && size == "medium")
+        //{
+        //    size = "big";
+        //    transform.localScale = new Vector3(SIZE_BIG, SIZE_BIG);
+        //}
 
-        if (timeCount > TIME_GROW1 && size == "small")
-        {
-            size = "medium";
-            transform.localScale = new Vector3(SIZE_MEDIUM, SIZE_MEDIUM);
-        }
+        //int order = (int)(-transform.position.y * GamePlay.SORT_ORDER_DEPTH);
 
-        if (timeCount > TIME_GROW2 && size == "medium")
-        {
-            size = "big";
-            transform.localScale = new Vector3(SIZE_BIG, SIZE_BIG);
-        }
+        //if (state == "hungry")
+        //{
+        //    if (eat == null)
+        //        eat = GameObject.FindGameObjectWithTag("Fish1");
 
-        int order = (int)(-transform.position.y * GamePlay.SORT_ORDER_DEPTH);
+        //    if (eat == null)
+        //        return;
 
-        if (state == "hungry")
-        {
-            if (eat == null)
-                eat = GameObject.FindGameObjectWithTag("Fish1");
+        //    Vector3 direc = eat.transform.position - transform.position;
 
-            if (eat == null)
-                return;
+        //    if (direc.magnitude > 0.5f)
+        //    {
+        //        Vector3 cal = direc / direc.magnitude;
+        //        transform.position += cal * Time.deltaTime * 3f;
+        //        if (direc.x > 0)
+        //            GetComponent<SpriteRenderer>().flipX = true;
+        //        else
+        //            GetComponent<SpriteRenderer>().flipX = false;
+        //    }
+        //    else
+        //    {
+        //        Destroy(eat);
+        //        //eat.GetComponent<Grass>().GetEaten(10f);
+        //        eat = null;
+        //        state = "normal";
+        //        timeHunger = timeCount + TIME_HUNGER;
+        //        timeDie = timeCount + TIME_DIE;
+        //        txtStatus.text = "";
+        //    }
 
-            Vector3 direc = eat.transform.position - transform.position;
+        //    return;
+        //}
 
-            if (direc.magnitude > 0.5f)
-            {
-                Vector3 cal = direc / direc.magnitude;
-                transform.position += cal * Time.deltaTime * 3f;
-                if (direc.x > 0)
-                    GetComponent<SpriteRenderer>().flipX = true;
-                else
-                    GetComponent<SpriteRenderer>().flipX = false;
-            }
-            else
-            {
-                Destroy(eat);
-                //eat.GetComponent<Grass>().GetEaten(10f);
-                eat = null;
-                state = "normal";
-                timeHunger = timeCount + TIME_HUNGER;
-                timeDie = timeCount + TIME_DIE;
-                txtStatus.text = "";
-            }
+        //movetime -= Time.deltaTime;
+        //if (movetime < 0)
+        //{
+        //    movetime = Random.Range(4f, 12f);
+        //    moveLeft = !moveLeft;
+        //    vRange = Random.Range(-MAX_SPEED, MAX_SPEED);
+        //    movespeed = Random.Range(0.001f, MAX_SPEED);
+        //    if (!moveLeft)
+        //    {
+        //        GetComponent<SpriteRenderer>().flipX = true;
+        //    }
+        //    else
+        //    {
+        //        GetComponent<SpriteRenderer>().flipX = false;
+        //    }
+        //}
 
-            return;
-        }
+        //Vector3 currentPos = GetComponent<Transform>().position;
+        //if (currentPos.x < -GamePlay.SEA_WIDTH)
+        //{
+        //    moveLeft = false;
+        //    GetComponent<SpriteRenderer>().flipX = true;
+        //}
+        //if (currentPos.x > GamePlay.SEA_WIDTH)
+        //{
+        //    moveLeft = true;
+        //    GetComponent<SpriteRenderer>().flipX = false;
+        //}
 
-        movetime -= Time.deltaTime;
-        if (movetime < 0)
-        {
-            movetime = Random.Range(4f, 12f);
-            moveLeft = !moveLeft;
-            vRange = Random.Range(-MAX_SPEED, MAX_SPEED);
-            movespeed = Random.Range(0.001f, MAX_SPEED);
-            if (!moveLeft)
-            {
-                GetComponent<SpriteRenderer>().flipX = true;
-            }
-            else
-            {
-                GetComponent<SpriteRenderer>().flipX = false;
-            }
-        }
+        //if (currentPos.y < -GamePlay.SEA_HEIGHT && vRange < 0) vRange = -vRange;
+        //if (currentPos.y > GamePlay.SEA_HEIGHT && vRange > 0) vRange = -vRange;
 
-        Vector3 currentPos = GetComponent<Transform>().position;
-        if (currentPos.x < -GamePlay.SEA_WIDTH)
-        {
-            moveLeft = false;
-            GetComponent<SpriteRenderer>().flipX = true;
-        }
-        if (currentPos.x > GamePlay.SEA_WIDTH)
-        {
-            moveLeft = true;
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
+        //if (moveLeft)
+        //{
+        //    GetComponent<Transform>().position += new Vector3(-movespeed, vRange, 0) * Time.deltaTime;
+        //}
+        //else
+        //    GetComponent<Transform>().position += new Vector3(movespeed, vRange, 0) * Time.deltaTime;
 
-        if (currentPos.y < -GamePlay.SEA_HEIGHT && vRange < 0) vRange = -vRange;
-        if (currentPos.y > GamePlay.SEA_HEIGHT && vRange > 0) vRange = -vRange;
-
-        if (moveLeft)
-        {
-            GetComponent<Transform>().position += new Vector3(-movespeed, vRange, 0) * Time.deltaTime;
-        }
-        else
-            GetComponent<Transform>().position += new Vector3(movespeed, vRange, 0) * Time.deltaTime;
-
-        if (state == "hurt")
-        {
-            hp -= Time.deltaTime;
-            if (hp <= 0 && state != "dead")
-            {
-                state = "dead";
-                GameObject go = Instantiate(ghost, transform.position, Quaternion.identity);
-                GamePlay.Instance.DestroyDelay(go, 1f);
-                Destroy(gameObject);
-            }
-        }
+        //if (state == "hurt")
+        //{
+        //    hp -= Time.deltaTime;
+        //    if (hp <= 0 && state != "dead")
+        //    {
+        //        state = "dead";
+        //        GameObject go = Instantiate(ghost, transform.position, Quaternion.identity);
+        //        GamePlay.Instance.DestroyDelay(go, 1f);
+        //        Destroy(gameObject);
+        //    }
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -17,64 +17,64 @@ public class Grass : Fish
 
     void Start()
     {
-        hp = fishData.HP;
-        txtStatus.text = "";
-        timeCount = 0f;
-        GamePlay.oxygen += fishData.ADD_OXYGEN;
-        GamePlay.Instance.UpdateStat();
-        txtStatus.text = "+ " + fishData.ADD_OXYGEN + " oxygen!";
-        GamePlay.Instance.SetTextDelay(txtStatus, "", 2f);
+        //hp = fishData.HP;
+        //txtStatus.text = "";
+        //timeCount = 0f;
+        //GamePlay.oxygen += fishData.ADD_OXYGEN;
+        //GamePlay.Instance.UpdateStat();
+        //txtStatus.text = "+ " + fishData.ADD_OXYGEN + " oxygen!";
+        //GamePlay.Instance.SetTextDelay(txtStatus, "", 2f);
 
-        transform.localScale = new Vector3(fishData.SIZE_SMALL, fishData.SIZE_SMALL);
+        //transform.localScale = new Vector3(fishData.SIZE_SMALL, fishData.SIZE_SMALL);
     }
 
     void Update()
     {
-        timeCount += Time.deltaTime;
+        //timeCount += Time.deltaTime;
 
-        if (timeCount > timeProduce)
-        {
-            timeProduce += fishData.SPAWN_MONEY * Random.Range(0.75f, 1.25f);
-            Produce();
-        }
+        //if (timeCount > timeProduce)
+        //{
+        //    timeProduce += fishData.SPAWN_MONEY * Random.Range(0.75f, 1.25f);
+        //    Produce();
+        //}
 
-        if (timeCount > fishData.TIME_GROW1 && size == "small")
-        {
-            size = "medium";
-            GamePlay.oxygen += fishData.ADD_OXYGEN;
-            GamePlay.Instance.UpdateStat();
-            hp += fishData.HP;
+        //if (timeCount > fishData.TIME_GROW1 && size == "small")
+        //{
+        //    size = "medium";
+        //    GamePlay.oxygen += fishData.ADD_OXYGEN;
+        //    GamePlay.Instance.UpdateStat();
+        //    hp += fishData.HP;
 
-            txtStatus.text = "+ " + fishData.ADD_OXYGEN + " oxygen!";
-            GamePlay.Instance.SetTextDelay(txtStatus, "", 2f);
-            transform.localScale = new Vector3(fishData.SIZE_MEDIUM, fishData.SIZE_MEDIUM);
-        }
+        //    txtStatus.text = "+ " + fishData.ADD_OXYGEN + " oxygen!";
+        //    GamePlay.Instance.SetTextDelay(txtStatus, "", 2f);
+        //    transform.localScale = new Vector3(fishData.SIZE_MEDIUM, fishData.SIZE_MEDIUM);
+        //}
 
-        if (timeCount > fishData.TIME_GROW2 && size == "medium")
-        {
-            size = "big";
-            GamePlay.oxygen += fishData.ADD_OXYGEN;
-            GamePlay.Instance.UpdateStat();
-            hp += fishData.HP;
+        //if (timeCount > fishData.TIME_GROW2 && size == "medium")
+        //{
+        //    size = "big";
+        //    GamePlay.oxygen += fishData.ADD_OXYGEN;
+        //    GamePlay.Instance.UpdateStat();
+        //    hp += fishData.HP;
 
-            txtStatus.text = "+ " + fishData.ADD_OXYGEN + " oxygen!";
-            GamePlay.Instance.SetTextDelay(txtStatus, "", 2f);
-            transform.localScale = new Vector3(fishData.SIZE_BIG, fishData.SIZE_BIG);
-        }
+        //    txtStatus.text = "+ " + fishData.ADD_OXYGEN + " oxygen!";
+        //    GamePlay.Instance.SetTextDelay(txtStatus, "", 2f);
+        //    transform.localScale = new Vector3(fishData.SIZE_BIG, fishData.SIZE_BIG);
+        //}
 
-        int order = (int)(-transform.position.y * GamePlay.SORT_ORDER_DEPTH);
+        //int order = (int)(-transform.position.y * GamePlay.SORT_ORDER_DEPTH);
 
-        if (state == "hurt")
-        {
-            hp -= Time.deltaTime;
-            if (hp <= 0 && state != "dead")
-            {
-                state = "dead";
-                GameObject go = Instantiate(fishData.ghost, transform.position, Quaternion.identity);
-                GamePlay.Instance.DestroyDelay(go, 1f);
-                Destroy(gameObject);
-            }
-        }
+        //if (state == "hurt")
+        //{
+        //    hp -= Time.deltaTime;
+        //    if (hp <= 0 && state != "dead")
+        //    {
+        //        state = "dead";
+        //        GameObject go = Instantiate(fishData.ghost, transform.position, Quaternion.identity);
+        //        GamePlay.Instance.DestroyDelay(go, 1f);
+        //        Destroy(gameObject);
+        //    }
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

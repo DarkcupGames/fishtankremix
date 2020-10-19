@@ -57,129 +57,90 @@ public class FishNormal : Fish
     {
         timeCount += Time.deltaTime;
 
-        //if (sync.data.owner != ServerSystem.playerid)
+        //if (timeCount > TIME_GROW1 && size == "small")
         //{
-        //    // get data here
-        //    state = sync.data.state;
-        //    movespeed = sync.data.speed;
-
-        //    //if (sync.data.desirePos.x > transform.position.x)
-        //    //    GetComponent<SpriteRenderer>().flipX = false;
-        //    //else
-        //    //    GetComponent<SpriteRenderer>().flipX = true;
-        //    // sync state
-        //    // do something here
-        //    return;
-        //}
-        //else
-        //{
-        //    // send data here
-        //    sync.data.state = state;
-        //    sync.data.speed = movespeed;
-        //    sync.data.desirePos = transform.position;
+        //    size = "medium";
+        //    transform.localScale = new Vector3(SIZE_MEDIUM, SIZE_MEDIUM);
         //}
 
-        //if (timeCount > timeHunger && state != "hungry")
+        //if (timeCount > TIME_GROW2 && size == "medium")
         //{
-        //    txtStatus.text = "hungry!";
-        //    state = "hungry";
+        //    size = "big";
+        //    transform.localScale = new Vector3(SIZE_BIG, SIZE_BIG);
+        //}
 
+        //int order = (int)(-transform.position.y * GamePlay.SORT_ORDER_DEPTH);
+
+        //if (state == "hungry")
+        //{
         //    if (eat == null)
         //        eat = GameObject.FindGameObjectWithTag("Grass");
+
+        //    if (eat == null)
+        //        return;
+
+        //    Vector3 direc = eat.transform.position - transform.position;
+
+        //    if (direc.magnitude > 0.5f)
+        //    {
+        //        Vector3 cal = direc / direc.magnitude;
+        //        transform.position += cal * Time.deltaTime * 3f;
+        //        if (direc.x > 0)
+        //            GetComponent<SpriteRenderer>().flipX = true;
+        //        else
+        //            GetComponent<SpriteRenderer>().flipX = false;
+        //    }
+        //    else
+        //    {
+        //        eat.GetComponent<Grass>().GetEaten(10f);
+        //        eat = null;
+        //        state = "normal";
+        //        timeHunger = timeCount + TIME_HUNGER;
+        //        timeDie = timeCount + TIME_DIE;
+        //        txtStatus.text = "";
+        //    }
+
+        //    return;
         //}
 
-        //if (timeCount > timeDie && state == "hungry")
+        //movetime -= Time.deltaTime;
+        //if (movetime < 0)
         //{
-        //    state = "dead";
-        //    GameObject go = Instantiate(ghost, transform.position, Quaternion.identity);
-        //    GamePlay.Instance.DestroyDelay(go, 1f);
-        //    Destroy(gameObject);
+        //    movetime = Random.Range(4f, 12f);
+        //    moveLeft = !moveLeft;
+        //    vRange = Random.Range(-MAX_SPEED, MAX_SPEED);
+        //    movespeed = Random.Range(0.001f, MAX_SPEED);
+        //    if (!moveLeft)
+        //    {
+        //        GetComponent<SpriteRenderer>().flipX = true;
+        //    }
+        //    else
+        //    {
+        //        GetComponent<SpriteRenderer>().flipX = false;
+        //    }  
         //}
 
-        if (timeCount > TIME_GROW1 && size == "small")
-        {
-            size = "medium";
-            transform.localScale = new Vector3(SIZE_MEDIUM, SIZE_MEDIUM);
-        }
+        //Vector3 currentPos = GetComponent<Transform>().position;
+        //if (currentPos.x < - GamePlay.SEA_WIDTH)
+        //{
+        //    moveLeft = false;
+        //    GetComponent<SpriteRenderer>().flipX = true;
+        //}
+        //if (currentPos.x > GamePlay.SEA_WIDTH)
+        //{
+        //    moveLeft = true;
+        //    GetComponent<SpriteRenderer>().flipX = false;
+        //}
 
-        if (timeCount > TIME_GROW2 && size == "medium")
-        {
-            size = "big";
-            transform.localScale = new Vector3(SIZE_BIG, SIZE_BIG);
-        }
+        //if (currentPos.y < - GamePlay.SEA_HEIGHT && vRange < 0) vRange = -vRange;
+        //if (currentPos.y > GamePlay.SEA_HEIGHT && vRange > 0) vRange = -vRange;
 
-        int order = (int)(-transform.position.y * GamePlay.SORT_ORDER_DEPTH);
-
-        if (state == "hungry")
-        {
-            if (eat == null)
-                eat = GameObject.FindGameObjectWithTag("Grass");
-
-            if (eat == null)
-                return;
-
-            Vector3 direc = eat.transform.position - transform.position;
-
-            if (direc.magnitude > 0.5f)
-            {
-                Vector3 cal = direc / direc.magnitude;
-                transform.position += cal * Time.deltaTime * 3f;
-                if (direc.x > 0)
-                    GetComponent<SpriteRenderer>().flipX = true;
-                else
-                    GetComponent<SpriteRenderer>().flipX = false;
-            }
-            else
-            {
-                eat.GetComponent<Grass>().GetEaten(10f);
-                eat = null;
-                state = "normal";
-                timeHunger = timeCount + TIME_HUNGER;
-                timeDie = timeCount + TIME_DIE;
-                txtStatus.text = "";
-            }
-
-            return;
-        }
-
-        movetime -= Time.deltaTime;
-        if (movetime < 0)
-        {
-            movetime = Random.Range(4f, 12f);
-            moveLeft = !moveLeft;
-            vRange = Random.Range(-MAX_SPEED, MAX_SPEED);
-            movespeed = Random.Range(0.001f, MAX_SPEED);
-            if (!moveLeft)
-            {
-                GetComponent<SpriteRenderer>().flipX = true;
-            }
-            else
-            {
-                GetComponent<SpriteRenderer>().flipX = false;
-            }  
-        }
-
-        Vector3 currentPos = GetComponent<Transform>().position;
-        if (currentPos.x < - GamePlay.SEA_WIDTH)
-        {
-            moveLeft = false;
-            GetComponent<SpriteRenderer>().flipX = true;
-        }
-        if (currentPos.x > GamePlay.SEA_WIDTH)
-        {
-            moveLeft = true;
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
-
-        if (currentPos.y < - GamePlay.SEA_HEIGHT && vRange < 0) vRange = -vRange;
-        if (currentPos.y > GamePlay.SEA_HEIGHT && vRange > 0) vRange = -vRange;
-
-        if (moveLeft)
-        {
-            GetComponent<Transform>().position += new Vector3(-movespeed , vRange, 0) * Time.deltaTime;
-        }
-        else
-            GetComponent<Transform>().position += new Vector3(movespeed, vRange, 0) * Time.deltaTime;
+        //if (moveLeft)
+        //{
+        //    GetComponent<Transform>().position += new Vector3(-movespeed , vRange, 0) * Time.deltaTime;
+        //}
+        //else
+        //    GetComponent<Transform>().position += new Vector3(movespeed, vRange, 0) * Time.deltaTime;
 
         //if (state == "hurt")
         //{

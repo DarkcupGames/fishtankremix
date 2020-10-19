@@ -8,7 +8,9 @@ using Utf8Json;
 
 public class ServerSystem : MonoBehaviour
 {
-    public static string SERVER_URL = "ws://fishtankserver.herokuapp.com/ws";
+    //public static string SERVER_URL = "ws://fishtankserver.herokuapp.com/ws";
+    //public static string SERVER_URL = "ws://chatgolang.herokuapp.com/ws/main";
+    public static string SERVER_URL = "ws://chatgolang.herokuapp.com/ws/command";
     public static ServerSystem Instance;
 
     public static ClientData curPlayer;

@@ -8,26 +8,18 @@ using UnityEngine.UI;
 public class GamePlay : MonoBehaviour
 {
     public static GamePlay Instance;
-
-    public static int SORT_ORDER_DEPTH = 1000;
-    public static float SEA_WIDTH = 20f;
-    public static float SEA_HEIGHT = 10f;
-    public static float TIME_MONSTER_WAKEUP1 = 120;
-    public static float TIME_MONSTER_WAKEUP2 = 240;
-
-    public Slider slider;
-    public TextMeshProUGUI txtMoney;
-    public PopupConfirm popupConfirm;
-
-    public static List<FishNormal> listFish;
-
-    public GameObject grassObj;
-    public GameObject fishObj;
-
     public static float money;
-    public static float grass;
-    public static float oxygen;
-    public static float fishCount;
+
+    public Image interactImg;
+    public TextMeshProUGUI txtMoney;
+    public GameObject inventoryObj;
+    public GameObject inventoryButton;
+    public Transform itemParent;
+
+    [HideInInspector]
+    public InteractableObject interact;
+    [HideInInspector]
+    public Dictionary<GameItem, InventoryItemDisplay> inventory;
 
     float timeCount = 0f;
     string status = "sleep";
@@ -36,13 +28,11 @@ public class GamePlay : MonoBehaviour
     {
         if (Instance == null)
         {
-            listFish = new List<FishNormal>();
             Instance = this;
             DontDestroyOnLoad(gameObject);
             money = 10f;
-            Debug.Log("playerid is: " + ServerSystem.playerid);
+            inventory = new Dictionary<GameItem, InventoryItemDisplay>();
             ServerSystem.sendRequest = true;
-            Debug.Log("turn send request on");
         }
         else
         {
@@ -53,57 +43,77 @@ public class GamePlay : MonoBehaviour
 
     void Update()
     {
-        //timeCount += Time.deltaTime;
+    }
 
-        //if (timeCount > TIME_MONSTER_WAKEUP1 && status == "sleep")
-        //{
-        //    status = "wake1";
-        //    popupConfirm.Show("QUÁI VẬT THỨC GIẤC", "Quái vật đã thức giấc, bạn có muốn feed nó 200 food??",
-        //        () =>
-        //        {
-        //            if (!GamePlay.Instance.SpendMoney(200))
-        //            {
-        //                popupConfirm.Show("GAME OVER!", "Bạn không đủ food!! Cá của bạn sẽ bị ăn!!!");
-        //            }
-        //            else
-        //            {
-        //                popupConfirm.Hide();
-        //            }
-                    
-        //        },
-        //        () =>
-        //        {
-        //            popupConfirm.Show("Cá đã bị ăn","Một số cá của bạn đã chết vì quái vật ăn");
-        //            if (listFish.Count > 0)
-        //            {
-        //                int index = UnityEngine.Random.Range(0, listFish.Count);
-        //                Destroy(listFish[index]);
-        //                listFish.RemoveAt(index);
-        //            }
-        //        });
-        //}
+    public void ShowInventory()
+    {
+        inventoryObj.SetActive(true);
+        inventoryButton.SetActive(false);
+    }
 
-        //if (timeCount > TIME_MONSTER_WAKEUP2 && status == "wake1")
-        //{
-        //    status = "wake2";
-        //    popupConfirm.Show("QUÁI VẬT THỨC GIẤC", "Quái vật đã thức giấc, bạn có muốn feed nó 1000 food??",
-        //        () =>
-        //        {
-        //            popupConfirm.Hide();
-        //        },
-        //        () =>
-        //        {
-        //            popupConfirm.Show("Cá đã bị ăn", "Một số cá của bạn đã chết vì quái vật ăn");
-        //            if (listFish.Count > 0)
-        //            {
-        //                int index = UnityEngine.Random.Range(0, listFish.Count);
-        //                Destroy(listFish[index]);
-        //                listFish.RemoveAt(index);
-        //            }
-        //        });
-        //}
+    public void HideInventory()
+    {
+        inventoryObj.SetActive(false);
+        inventoryButton.SetActive(true);
+    }
 
-        //money += Time.deltaTime;
+    public void Interact()
+    {
+        StartCoroutine(InteractCoroutine());
+    }
+
+    public IEnumerator InteractCoroutine()
+    {
+        if (interact != null)
+        {
+            GameObject go = Resources.Load<GameObject>("Effect/doing") as GameObject;
+            GameObject spawn = Instantiate(go, interact.transform.position, Quaternion.identity);
+            ServerSystem.curPlayer.s = "stop";
+            yield return new WaitForSeconds(1.5f);
+
+            AddItem(interact.item, 1);
+            Destroy(interact.gameObject);
+            interact = null;
+            interactImg.sprite = null;
+            ServerSystem.curPlayer.s = "stand";
+            Destroy(spawn);
+        }
+    }
+
+    public void AddItem(GameItem item, int amount)
+    {
+        if (!inventory.ContainsKey(item))
+        {
+            GameObject go = CreateGameObjectFromPath("UI/inventoryItemDisplay", transform.position);
+            go.transform.SetParent(itemParent);
+            go.transform.localScale = new Vector3(1, 1, 1);
+            go.GetComponent<InventoryItemDisplay>().item = item;
+            inventory.Add(item, go.GetComponent<InventoryItemDisplay>());
+            inventory[item].UpdateDisplay();
+        }
+        else
+        {
+            inventory[item].amount += amount;
+            inventory[item].UpdateDisplay();
+        }
+    }
+
+    public bool RemoveItem(GameItem item, int amount)
+    {
+        if (inventory[item].amount >= amount)
+        {
+            inventory[item].amount -= amount;
+            inventory[item].UpdateDisplay();
+            return true;
+        }
+        return false;
+    }
+
+    public GameObject CreateGameObjectFromPath(string path, Vector3 position)
+    {
+        GameObject go = Resources.Load<GameObject>(path) as GameObject;
+        GameObject spawn = Instantiate(go, position, Quaternion.identity);
+        return spawn;
     }
 
     public void AddMoney(float amount) {
@@ -121,10 +131,6 @@ public class GamePlay : MonoBehaviour
 
     public void UpdateStat()
     {
-        string content = "Money: " + ((int)money).ToString();
-        content += "\nGrass: " + ((int)grass).ToString();
-        content += "\nOxygen: " + ((int)oxygen).ToString();
-        txtMoney.text = content;
     }
 
     public void DestroyDelay(GameObject go, float sec)
@@ -172,18 +178,3 @@ public class GamePlay : MonoBehaviour
         return result;
     }
 }
-
-
-//private var characters : String = "0123456789abcdefghijklmnopqrstuvwxABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-//function Start()
-//{
-//    var code : String = "";
-
-//for (var i : int = 0; i < 20; i++) {
-//    var a : int = Random.Range(0, characters.length);
-//    code = code + characters[a];
-//}
-
-//Debug.Log(code);
-// }

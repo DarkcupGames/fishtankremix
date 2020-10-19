@@ -20,40 +20,12 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (client.s == "stop")
+            return;
+
         UpdatePosition();
         UpdateAnimation();
         CheckInput();
-        //if (sync.data.id != ServerSystem.playerid)
-        //{
-        //    GetComponent<Rigidbody2D>().velocity = sync.data.v;
-        //    GetComponent<DAnimator>().spritesheet = stand;
-        //    return;
-        //}
-
-
-        //if (joystick.Horizontal == 0 && joystick.Vertical == 0)
-        //{
-        //    sync.data.s = "stand";
-        //    GetComponent<DAnimator>().spritesheet = stand;
-        //    GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0);
-        //}
-        //else
-        //{
-        //    Vector3 velocity = new Vector3(joystick.Horizontal, joystick.Vertical).normalized * speed;
-        //    GetComponent<Rigidbody2D>().velocity = velocity;
-        //    sync.data.s = "walk";
-        //    sync.data.v = velocity;
-
-        //    if (velocity.x < 0)
-        //        transform.localScale = new Vector3(1, 1, 1);
-        //    else if (velocity.x > 0)
-        //        transform.localScale = new Vector3(-1, 1, 1);
-        //}
-
-
-
-        //transform.position += new Vector3(joystick.Horizontal, joystick.Vertical) * speed * Time.deltaTime;
-
     }
 
     public void UpdatePosition()
@@ -89,7 +61,6 @@ public class Player : MonoBehaviour
             Vector3 velocity = new Vector3(joystick.Horizontal, joystick.Vertical).normalized * speed;
             GetComponent<Rigidbody2D>().velocity = velocity;
             client.s = "walk";
-            Debug.Log(velocity);
         }
 
         client.p = transform.position;
