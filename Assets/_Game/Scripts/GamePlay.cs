@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +14,7 @@ public class GamePlay : MonoBehaviour
     public Image interactImg;
     public TextMeshProUGUI txtMoney;
     public GameObject inventoryObj;
+    public GameObject itemDetailObj;
     public GameObject inventoryButton;
     public Transform itemParent;
 
@@ -33,6 +35,8 @@ public class GamePlay : MonoBehaviour
             money = 10f;
             inventory = new Dictionary<GameItem, InventoryItemDisplay>();
             ServerSystem.sendRequest = true;
+            inventoryObj.SetActive(false);
+            itemDetailObj.SetActive(false);
         }
         else
         {
@@ -43,6 +47,19 @@ public class GamePlay : MonoBehaviour
 
     void Update()
     {
+    }
+
+    public static Vector3 StringToVector(string str)
+    {
+        float[] newPosCoordinates = str.Split(new string[] { ", " }, StringSplitOptions.None).Select(x => float.Parse(x)).ToArray();
+        Vector3 newpos = new Vector3(newPosCoordinates[0], newPosCoordinates[1], newPosCoordinates[2]);
+        return newpos;
+    }
+
+    public void ShowItemDetail(InventoryItemDisplay inventoryItem)
+    {
+        itemDetailObj.SetActive(true);
+        itemDetailObj.GetComponent<ItemDetailDisplay>().UpdateDisplay(inventoryItem);
     }
 
     public void ShowInventory()
@@ -84,8 +101,7 @@ public class GamePlay : MonoBehaviour
     {
         if (!inventory.ContainsKey(item))
         {
-            GameObject go = CreateGameObjectFromPath("UI/inventoryItemDisplay", transform.position);
-            go.transform.SetParent(itemParent);
+            GameObject go = CreateGameObjectFromPath("UI/inventoryItemDisplay", itemParent);
             go.transform.localScale = new Vector3(1, 1, 1);
             go.GetComponent<InventoryItemDisplay>().item = item;
             inventory.Add(item, go.GetComponent<InventoryItemDisplay>());
@@ -113,6 +129,13 @@ public class GamePlay : MonoBehaviour
     {
         GameObject go = Resources.Load<GameObject>(path) as GameObject;
         GameObject spawn = Instantiate(go, position, Quaternion.identity);
+        return spawn;
+    }
+
+    public GameObject CreateGameObjectFromPath(string path, Transform transform)
+    {
+        GameObject go = Resources.Load<GameObject>(path) as GameObject;
+        GameObject spawn = Instantiate(go, transform);
         return spawn;
     }
 

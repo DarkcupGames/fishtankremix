@@ -149,9 +149,13 @@
     <Compile Include="Assets\_Game\Scripts\Login\Login.cs" />
     <Compile Include="Assets\_Game\Scripts\Server\ClientData.cs" />
     <Compile Include="Assets\_Game\Scripts\Server\ClientObject.cs" />
+    <Compile Include="Assets\_Game\Scripts\Server\CommandServer.cs" />
     <Compile Include="Assets\_Game\Scripts\Server\Connection.cs" />
     <Compile Include="Assets\_Game\Scripts\Server\ServerSystem.cs" />
     <Compile Include="Assets\_Game\Scripts\Server\WebSocket\WebSocket.cs" />
+    <Compile Include="Assets\_Game\Scripts\Server\WebSocketConnecter.cs" />
+    <Compile Include="Assets\_Game\Scripts\Server\WebsocketCommand.cs" />
+    <Compile Include="Assets\_Game\Scripts\UI\ItemDetailDisplay.cs" />
     <Compile Include="Assets\_Game\Scripts\_Basic\CameraFollower.cs" />
     <Compile Include="Assets\_Game\Scripts\_Basic\CloseButton.cs" />
     <Compile Include="Assets\_Game\Scripts\_Basic\Debug1.cs" />

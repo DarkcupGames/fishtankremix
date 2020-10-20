@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class InventoryItemDisplay : MonoBehaviour
 {
-    //public TextMeshProUGUI txtName;
     public TextMeshProUGUI txtAmount;
     public Image image;
 
@@ -14,8 +13,13 @@ public class InventoryItemDisplay : MonoBehaviour
 
     public void UpdateDisplay()
     {
-        //txtName.text = item.displayname;
         image.sprite = item.sprite;
         txtAmount.text = amount.ToString();
     }
+
+    public void OnClick()
+    {
+        GamePlay.Instance.ShowItemDetail(this);
+    }
 }
+

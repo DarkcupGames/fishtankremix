@@ -9,8 +9,8 @@ using Utf8Json;
 public class ServerSystem : MonoBehaviour
 {
     //public static string SERVER_URL = "ws://fishtankserver.herokuapp.com/ws";
-    //public static string SERVER_URL = "ws://chatgolang.herokuapp.com/ws/main";
-    public static string SERVER_URL = "ws://chatgolang.herokuapp.com/ws/command";
+    public static string SERVER_URL_MAIN = "ws://chatgolang.herokuapp.com/ws/main";
+    public static string SERVER_URL_COMMAND = "ws://chatgolang.herokuapp.com/ws/command";
     public static ServerSystem Instance;
 
     public static ClientData curPlayer;
@@ -25,6 +25,7 @@ public class ServerSystem : MonoBehaviour
     public CameraFollower cameraFollower;
 
     WebSocket websocket;
+    WebSocket commandsocket;
 
     private void Awake()
     {
@@ -33,7 +34,7 @@ public class ServerSystem : MonoBehaviour
         dic = new Dictionary<string, Player>();
 
         GameObject spawn = Resources.Load<GameObject>("player") as GameObject;
-        GameObject go = Instantiate(spawn, new Vector3(0,0), Quaternion.identity);
+        GameObject go = Instantiate(spawn, new Vector3(0, 0), Quaternion.identity);
         player = go;
 
         curPlayer = player.GetComponent<Player>().client;
@@ -48,30 +49,20 @@ public class ServerSystem : MonoBehaviour
         cameraFollower.target = player;
     }
 
-    async void Start()
+    void Start()
     {
-        websocket = new WebSocket(SERVER_URL);
+        websocket = CreateWebsocketConnection(SERVER_URL_MAIN, ReveiMessage);
+        commandsocket = CreateWebsocketConnection(SERVER_URL_COMMAND, ReveiCommandMessage);
 
-        websocket.OnOpen += () =>
-        {
-            Debug1.Log("Connection open!");
-        };
+        InvokeRepeating("SendWebSocketMessage", 0f, 0.2f);
+    }
 
-        websocket.OnError += (e) =>
-        {
-            Debug1.Log("Error! " + e);
-        };
-
-        websocket.OnClose += (e) =>
-        {
-            Debug1.Log("Connection closed!");
-        };
-
-        websocket.OnMessage += ReveiMessage;
-
-        InvokeRepeating("SendWebSocketMessage", 0.0f, 0.02f);
-
-        await websocket.Connect();
+    public WebSocket CreateWebsocketConnection(string url, WebSocketMessageEventHandler action)
+    {
+        GameObject go = Instantiate(new GameObject(), transform);
+        go.AddComponent(typeof(WebSocketConnecter));
+        go.GetComponent<WebSocketConnecter>().StartWebsocket(url, action);
+        return go.GetComponent<WebSocketConnecter>().webSocket;
     }
 
     public void ReveiMessage(byte[] bytes)
@@ -94,11 +85,19 @@ public class ServerSystem : MonoBehaviour
         }
     }
 
-    void Update()
+    public void ReveiCommandMessage(byte[] bytes)
     {
-#if !UNITY_WEBGL || UNITY_EDITOR
-        websocket.DispatchMessageQueue();
-#endif
+        WebsocketCommand command = JsonSerializer.Deserialize<WebsocketCommand>(bytes);
+
+        if (command.type == "create")
+        {
+            GamePlay.Instance.CreateGameObjectFromPath(command.s1, command.v1);
+        }
+    }
+
+    public async void SendCommand(WebsocketCommand command)
+    {
+        await commandsocket.Send(JsonSerializer.Serialize(command));
     }
 
     async void SendWebSocketMessage()
@@ -112,8 +111,13 @@ public class ServerSystem : MonoBehaviour
         }
     }
 
-    private async void OnApplicationQuit()
+    public void CreateTree()
     {
-        await websocket.Close();
+        WebsocketCommand command = new WebsocketCommand();
+        command.type = "create";
+        command.s1 = "tree";
+        command.v1 = player.transform.position;
+
+        SendCommand(command);
     }
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

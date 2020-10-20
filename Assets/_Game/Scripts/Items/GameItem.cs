@@ -7,6 +7,7 @@ public class GameItem : ScriptableObject
 {
     public string codename;
     public string displayname;
+    public string description;
     public Sprite sprite;
     public float price;
     public GameObject obj;

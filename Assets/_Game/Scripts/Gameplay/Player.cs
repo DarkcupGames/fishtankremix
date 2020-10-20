@@ -93,5 +93,14 @@ public class Player : MonoBehaviour
             spawn.transform.SetParent(transform);
         }
 
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            WebsocketCommand command = new WebsocketCommand();
+            command.type = "create";
+            command.s1 = "tree";
+            command.v1 = transform.position;
+
+            ServerSystem.Instance.SendCommand(command);
+        }
     }
 }
