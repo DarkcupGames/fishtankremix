@@ -29,7 +29,7 @@ public class SortingOrderFixer : MonoBehaviour
         if (count < 0)
         {
             count = UPDATE_RATE;
-            render.sortingOrder = ((int)-transform.position.y) * 100;
+            render.sortingOrder = (int)(-transform.position.y * 100);
         }
     }
 }
