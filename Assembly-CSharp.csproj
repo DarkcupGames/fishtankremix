@@ -156,6 +156,7 @@
     <Compile Include="Assets\_Game\Scripts\Server\WebSocketConnecter.cs" />
     <Compile Include="Assets\_Game\Scripts\Server\WebsocketCommand.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\ItemDetailDisplay.cs" />
+    <Compile Include="Assets\_Game\Scripts\UI\ItemDragToUse.cs" />
     <Compile Include="Assets\_Game\Scripts\_Basic\CameraFollower.cs" />
     <Compile Include="Assets\_Game\Scripts\_Basic\CloseButton.cs" />
     <Compile Include="Assets\_Game\Scripts\_Basic\Debug1.cs" />

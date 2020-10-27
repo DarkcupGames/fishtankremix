@@ -153,7 +153,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14838}
     - Class: 114
-      Script: {instanceID: 16170}
+      Script: {instanceID: 15954}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -252,7 +252,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14744}
     - Class: 114
-      Script: {instanceID: 16170}
+      Script: {instanceID: 15954}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -972,4 +972,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/_Game/Scenes/Login.unity
   - Assets/_Game/Scenes/Gameplay.unity
-  playerPath: C:/Users/Admin/Desktop/epic.apk
+  playerPath: C:/Users/Admin/Desktop/newart.apk
