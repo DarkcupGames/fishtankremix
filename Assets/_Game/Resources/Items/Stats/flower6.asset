@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47cae6360f12db44ab4108bd04bd8a2, type: 3}
+  m_Name: flower6
+  m_EditorClassIdentifier: 
+  codename: flower6
+  displayname: Sirama Flower
+  description: Strike you with a thunder
+  sprite: {fileID: 21300000, guid: 2f32d72887b1e8f48b4dec322c52c314, type: 3}
+  price: 200
+  obj: {fileID: 6716657397277454028, guid: 0035798c5de6f0b4b80c88913d265592, type: 3}

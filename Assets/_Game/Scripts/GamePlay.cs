@@ -44,6 +44,30 @@ public class GamePlay : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        List<string> objs = new List<string>() { "Items/Objects/flower1", "Items/Objects/flower2", "Items/Objects/flower3", "Items/Objects/flower6" };
+        for (int i = 0; i < 100; i++)
+        {
+            Vector3 pos = new Vector3(UnityEngine.Random.Range(-30f, 30f), UnityEngine.Random.Range(-30f, 30f));
+            int index = UnityEngine.Random.Range(0, objs.Count);
+            CreateGameObjectFromPath(objs[index], pos);
+        }
+
+        for (int i = 0; i < 20; i++)
+        {
+            Vector3 pos = new Vector3(UnityEngine.Random.Range(-30f, 30f), UnityEngine.Random.Range(-30f, 30f));
+            int index = UnityEngine.Random.Range(0, objs.Count);
+            CreateGameObjectFromPath("Environment/bigtree", pos);
+        }
+
+        for (int i = 0; i < 200; i++)
+        {
+            Vector3 pos = new Vector3(UnityEngine.Random.Range(-30f, 30f), UnityEngine.Random.Range(-30f, 30f));
+            int index = UnityEngine.Random.Range(0, objs.Count);
+            CreateGameObjectFromPath("Environment/grass", pos);
+        }
+    }
 
     void Update()
     {
@@ -86,7 +110,7 @@ public class GamePlay : MonoBehaviour
             GameObject go = Resources.Load<GameObject>("Effect/doing") as GameObject;
             GameObject spawn = Instantiate(go, interact.transform.position, Quaternion.identity);
             ServerSystem.curPlayer.s = "stop";
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(0.5f);
 
             AddItem(interact.item, 1);
             Destroy(interact.gameObject);

@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6716657397277454030}
   - component: {fileID: 6716657397277454029}
+  - component: {fileID: -6765087229387654630}
+  - component: {fileID: 3335361699284615064}
   m_Layer: 0
   m_Name: flower6
   m_TagString: Untagged
@@ -81,3 +83,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-6765087229387654630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6716657397277454028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7839e4eaec28b424b9e78fb21dde2e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 3be07f8097cfdcb46a502f29736078f0, type: 2}
+--- !u!114 &3335361699284615064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6716657397277454028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5833bf7ac87f8ab4fab8d20146391162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0

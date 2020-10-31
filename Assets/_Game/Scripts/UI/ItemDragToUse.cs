@@ -2,23 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ItemDragToUse : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
     public ItemDetailDisplay itemDetail;
+    public Image virtualImg;
 
     public void OnDrag(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        Vector3 pos = Utils.ConvertToScaledScreenPosition(Input.mousePosition, 1920, 1080);
+        virtualImg.rectTransform.anchoredPosition = pos;
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        Vector3 pos = Utils.ConvertToScaledScreenPosition(Input.mousePosition, 1920, 1080);
+        virtualImg.rectTransform.anchoredPosition = pos;
+        virtualImg.sprite = itemDetail.itemHolder.item.sprite;
+        virtualImg.gameObject.SetActive(true);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        virtualImg.gameObject.SetActive(false);
+
+        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        pos = new Vector3(pos.x, pos.y, 0);
+        GameObject spawned = Instantiate(itemDetail.itemHolder.item.obj, pos, Quaternion.identity);
     }
 }
