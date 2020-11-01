@@ -130,6 +130,8 @@
     <Compile Include="Assets\Scripts\Utf8Json\Shims\Reflection.cs" />
     <Compile Include="Assets\Scripts\Utf8Json\Unity\ResolverAndFormatters.cs" />
     <Compile Include="Assets\TestWSSharp.cs" />
+    <Compile Include="Assets\_Game\Resources\Items\flag\Flag.cs" />
+    <Compile Include="Assets\_Game\Resources\Items\grass\Grass.cs" />
     <Compile Include="Assets\_Game\Scripts\Data\ClientInfo.cs" />
     <Compile Include="Assets\_Game\Scripts\GamePlay.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\Cave.cs" />
@@ -139,7 +141,7 @@
     <Compile Include="Assets\_Game\Scripts\Gameplay\FishNormal.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\FishSail.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\FishStat.cs" />
-    <Compile Include="Assets\_Game\Scripts\Gameplay\Grass.cs" />
+    <Compile Include="Assets\_Game\Scripts\Gameplay\Grass(DIsabled).cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\Hero.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\Player.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\PopupConfirm.cs" />

@@ -1,0 +1,1844 @@
+fileFormatVersion: 2
+guid: 0c507a5240287ef4693d0ce06cd44433
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3276466521423680883
+    second: 7c298dfef572c0d7c568baca53cdc2a3_0
+  - first:
+      213: -4338102470577133183
+    second: 7c298dfef572c0d7c568baca53cdc2a3_1
+  - first:
+      213: 8156476395568673793
+    second: 7c298dfef572c0d7c568baca53cdc2a3_2
+  - first:
+      213: 3507444483499205752
+    second: 7c298dfef572c0d7c568baca53cdc2a3_3
+  - first:
+      213: 7776592366409686477
+    second: 7c298dfef572c0d7c568baca53cdc2a3_4
+  - first:
+      213: -3112055335792491756
+    second: 7c298dfef572c0d7c568baca53cdc2a3_5
+  - first:
+      213: -7249109815478883023
+    second: 7c298dfef572c0d7c568baca53cdc2a3_6
+  - first:
+      213: 6564276702577201285
+    second: 7c298dfef572c0d7c568baca53cdc2a3_7
+  - first:
+      213: 6767225021090678897
+    second: 7c298dfef572c0d7c568baca53cdc2a3_8
+  - first:
+      213: -7930584640380527616
+    second: 7c298dfef572c0d7c568baca53cdc2a3_9
+  - first:
+      213: -4131016439196796751
+    second: 7c298dfef572c0d7c568baca53cdc2a3_10
+  - first:
+      213: -3742722959397464280
+    second: 7c298dfef572c0d7c568baca53cdc2a3_11
+  - first:
+      213: 1701647389502758456
+    second: 7c298dfef572c0d7c568baca53cdc2a3_12
+  - first:
+      213: -587452856244022402
+    second: 7c298dfef572c0d7c568baca53cdc2a3_13
+  - first:
+      213: 8183412111557544274
+    second: 7c298dfef572c0d7c568baca53cdc2a3_14
+  - first:
+      213: -608805558258947755
+    second: 7c298dfef572c0d7c568baca53cdc2a3_15
+  - first:
+      213: -1701118588860706181
+    second: 7c298dfef572c0d7c568baca53cdc2a3_16
+  - first:
+      213: 3136386014667597059
+    second: 7c298dfef572c0d7c568baca53cdc2a3_17
+  - first:
+      213: -1171896172432393129
+    second: 7c298dfef572c0d7c568baca53cdc2a3_18
+  - first:
+      213: 2619013519997746727
+    second: 7c298dfef572c0d7c568baca53cdc2a3_19
+  - first:
+      213: 8901697127392159861
+    second: 7c298dfef572c0d7c568baca53cdc2a3_20
+  - first:
+      213: 4610874481083846933
+    second: 7c298dfef572c0d7c568baca53cdc2a3_21
+  - first:
+      213: 7797108245271719707
+    second: 7c298dfef572c0d7c568baca53cdc2a3_22
+  - first:
+      213: -3553446543588879197
+    second: 7c298dfef572c0d7c568baca53cdc2a3_23
+  - first:
+      213: 1902566315344791680
+    second: 7c298dfef572c0d7c568baca53cdc2a3_24
+  - first:
+      213: 6287319895332611700
+    second: 7c298dfef572c0d7c568baca53cdc2a3_25
+  - first:
+      213: 8437996937377396132
+    second: 7c298dfef572c0d7c568baca53cdc2a3_26
+  - first:
+      213: -8741430337232963866
+    second: 7c298dfef572c0d7c568baca53cdc2a3_27
+  - first:
+      213: 2238743152859821427
+    second: 7c298dfef572c0d7c568baca53cdc2a3_28
+  - first:
+      213: 6052037357667770035
+    second: 7c298dfef572c0d7c568baca53cdc2a3_29
+  - first:
+      213: 1722969747575736844
+    second: 7c298dfef572c0d7c568baca53cdc2a3_30
+  - first:
+      213: 7674829734877596486
+    second: 7c298dfef572c0d7c568baca53cdc2a3_31
+  - first:
+      213: 851717401424385115
+    second: 7c298dfef572c0d7c568baca53cdc2a3_32
+  - first:
+      213: 5645404768407605349
+    second: 7c298dfef572c0d7c568baca53cdc2a3_33
+  - first:
+      213: 5598656991446999888
+    second: 7c298dfef572c0d7c568baca53cdc2a3_34
+  - first:
+      213: -1649035002767704724
+    second: 7c298dfef572c0d7c568baca53cdc2a3_35
+  - first:
+      213: 614380590787254283
+    second: 7c298dfef572c0d7c568baca53cdc2a3_36
+  - first:
+      213: -1207419915029784690
+    second: 7c298dfef572c0d7c568baca53cdc2a3_37
+  - first:
+      213: 1691363374984391921
+    second: 7c298dfef572c0d7c568baca53cdc2a3_38
+  - first:
+      213: -5770353524802595040
+    second: 7c298dfef572c0d7c568baca53cdc2a3_39
+  - first:
+      213: -4918396864812385255
+    second: 7c298dfef572c0d7c568baca53cdc2a3_40
+  - first:
+      213: 1118699398759045259
+    second: 7c298dfef572c0d7c568baca53cdc2a3_41
+  - first:
+      213: -1571404883779433230
+    second: 7c298dfef572c0d7c568baca53cdc2a3_42
+  - first:
+      213: 8608551674013294576
+    second: 7c298dfef572c0d7c568baca53cdc2a3_43
+  - first:
+      213: -9044903234611726317
+    second: 7c298dfef572c0d7c568baca53cdc2a3_44
+  - first:
+      213: -2952862919795704557
+    second: 7c298dfef572c0d7c568baca53cdc2a3_45
+  - first:
+      213: 202475601426751363
+    second: 7c298dfef572c0d7c568baca53cdc2a3_46
+  - first:
+      213: -5845545987970346082
+    second: 7c298dfef572c0d7c568baca53cdc2a3_47
+  - first:
+      213: 2099608434835698039
+    second: 7c298dfef572c0d7c568baca53cdc2a3_48
+  - first:
+      213: 4299347862336444732
+    second: 7c298dfef572c0d7c568baca53cdc2a3_49
+  - first:
+      213: 1086237482309750677
+    second: 7c298dfef572c0d7c568baca53cdc2a3_50
+  - first:
+      213: -3505918120109343260
+    second: 7c298dfef572c0d7c568baca53cdc2a3_51
+  - first:
+      213: -8212038359631455084
+    second: 7c298dfef572c0d7c568baca53cdc2a3_52
+  - first:
+      213: -1736596369461898271
+    second: 7c298dfef572c0d7c568baca53cdc2a3_53
+  - first:
+      213: 72985704354477159
+    second: 7c298dfef572c0d7c568baca53cdc2a3_54
+  - first:
+      213: -4899552771238898184
+    second: 7c298dfef572c0d7c568baca53cdc2a3_55
+  - first:
+      213: 2355848519994349195
+    second: 7c298dfef572c0d7c568baca53cdc2a3_56
+  - first:
+      213: -4960280488421736699
+    second: 7c298dfef572c0d7c568baca53cdc2a3_57
+  - first:
+      213: -4552107712494907532
+    second: 7c298dfef572c0d7c568baca53cdc2a3_58
+  - first:
+      213: -623160163548149970
+    second: 7c298dfef572c0d7c568baca53cdc2a3_59
+  - first:
+      213: -2839159674111854607
+    second: 7c298dfef572c0d7c568baca53cdc2a3_60
+  - first:
+      213: -195321937329219570
+    second: 7c298dfef572c0d7c568baca53cdc2a3_61
+  - first:
+      213: -2189925671089718034
+    second: 7c298dfef572c0d7c568baca53cdc2a3_62
+  - first:
+      213: 5436304076397258850
+    second: 7c298dfef572c0d7c568baca53cdc2a3_63
+  - first:
+      213: 2348724168759470045
+    second: dontstarve_0
+  - first:
+      213: 6276837810604164541
+    second: dontstarve_1
+  - first:
+      213: -4640946017514351583
+    second: dontstarve_2
+  - first:
+      213: -5150549897138443421
+    second: dontstarve_3
+  - first:
+      213: -4493813901345754395
+    second: dontstarve_4
+  - first:
+      213: 8944971908526752267
+    second: dontstarve_5
+  - first:
+      213: 919397906464733428
+    second: dontstarve_6
+  - first:
+      213: 6642582920578724407
+    second: dontstarve_7
+  - first:
+      213: -901679768113108667
+    second: dontstarve_8
+  - first:
+      213: -7262303842263847692
+    second: dontstarve_9
+  - first:
+      213: 1971323966273700500
+    second: dontstarve_10
+  - first:
+      213: -5045522002223673446
+    second: dontstarve_11
+  - first:
+      213: -3491942562106496883
+    second: dontstarve_12
+  - first:
+      213: 7152245465617065159
+    second: dontstarve_13
+  - first:
+      213: -5967217265644461497
+    second: dontstarve_14
+  - first:
+      213: -8441877780301502161
+    second: dontstarve_15
+  - first:
+      213: -7571294901754465516
+    second: dontstarve_16
+  - first:
+      213: 5888008182306262426
+    second: dontstarve_17
+  - first:
+      213: 6885512129536177175
+    second: dontstarve_18
+  - first:
+      213: 9212040724839866773
+    second: dontstarve_19
+  - first:
+      213: -6760189443580616100
+    second: dontstarve_20
+  - first:
+      213: 8582190266095748941
+    second: dontstarve_21
+  - first:
+      213: 4214877393661090337
+    second: dontstarve_22
+  - first:
+      213: -5496620140649071108
+    second: dontstarve_23
+  - first:
+      213: 7787709190537372651
+    second: dontstarve_24
+  - first:
+      213: 1343536679895021576
+    second: dontstarve_25
+  - first:
+      213: 7521203310359128319
+    second: dontstarve_26
+  - first:
+      213: 7864963206019150021
+    second: dontstarve_27
+  - first:
+      213: -2267406320361221496
+    second: dontstarve_28
+  - first:
+      213: 4690478563210095552
+    second: dontstarve_29
+  - first:
+      213: -3719386932480440013
+    second: dontstarve_30
+  - first:
+      213: -3847150372514596045
+    second: dontstarve_31
+  - first:
+      213: -2591868657182312562
+    second: dontstarve_32
+  - first:
+      213: -5979478752540938538
+    second: dontstarve_33
+  - first:
+      213: -5934432487144608029
+    second: dontstarve_34
+  - first:
+      213: 5563019209215477239
+    second: dontstarve_35
+  - first:
+      213: -383565636491866098
+    second: dontstarve_36
+  - first:
+      213: -1254479860878318002
+    second: dontstarve_37
+  - first:
+      213: -528700028051135659
+    second: dontstarve_38
+  - first:
+      213: -3650332619223821296
+    second: dontstarve_39
+  - first:
+      213: -7645718555613941181
+    second: dontstarve_40
+  - first:
+      213: -4441047679512729382
+    second: dontstarve_41
+  - first:
+      213: 4779751325481048587
+    second: dontstarve_42
+  - first:
+      213: 8968616569911682610
+    second: dontstarve_43
+  - first:
+      213: -6655312145329200278
+    second: dontstarve_44
+  - first:
+      213: -6939245252396777928
+    second: dontstarve_45
+  - first:
+      213: 7245908542579540868
+    second: dontstarve_46
+  - first:
+      213: 3031645850985554517
+    second: dontstarve_47
+  - first:
+      213: 3736416682523718812
+    second: dontstarve_48
+  - first:
+      213: 5316232821159555065
+    second: dontstarve_49
+  - first:
+      213: -5280333982580994369
+    second: dontstarve_50
+  - first:
+      213: -3933477244266651834
+    second: dontstarve_51
+  - first:
+      213: -575478709347202217
+    second: dontstarve_52
+  - first:
+      213: 4427533253037578251
+    second: dontstarve_53
+  - first:
+      213: 6775715474706468537
+    second: dontstarve_54
+  - first:
+      213: -2524481723519172424
+    second: dontstarve_55
+  - first:
+      213: 2524341120112685235
+    second: dontstarve_56
+  - first:
+      213: -5934143730063511246
+    second: dontstarve_57
+  - first:
+      213: -144850662172242726
+    second: dontstarve_58
+  - first:
+      213: 1519069915814599751
+    second: dontstarve_59
+  - first:
+      213: 6063522455754243231
+    second: dontstarve_60
+  - first:
+      213: -4817343537046213542
+    second: dontstarve_61
+  - first:
+      213: -3305117310395077558
+    second: dontstarve_62
+  - first:
+      213: 3458951325464214848
+    second: dontstarve_63
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dontstarve_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 361
+        width: 118
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7684aff28589020800000000000000
+      internalID: 2348724168759470045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_1
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 419
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db54dcd8bbecb1750800000000000000
+      internalID: 6276837810604164541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_2
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 419
+        width: 59
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1241b449f2c089fb0800000000000000
+      internalID: -4640946017514351583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_3
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 424
+        width: 57
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b632748229588b0800000000000000
+      internalID: -5150549897138443421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_4
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 421
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2f293e014c2a1c0800000000000000
+      internalID: -4493813901345754395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_5
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 424
+        width: 58
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02c59dee8ce22c70800000000000000
+      internalID: 8944971908526752267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_6
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 417
+        width: 47
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f87116568b52cc00800000000000000
+      internalID: 919397906464733428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_7
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 422
+        width: 118
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732fb2ce8f13f2c50800000000000000
+      internalID: 6642582920578724407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_8
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 419
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549267837079c73f0800000000000000
+      internalID: -901679768113108667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_9
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 422
+        width: 56
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fca8eef12d173b90800000000000000
+      internalID: -7262303842263847692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_10
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 421
+        width: 55
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49245fae3bc8b5b10800000000000000
+      internalID: 1971323966273700500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_11
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 422
+        width: 59
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f4a07a874baf9b0800000000000000
+      internalID: -5045522002223673446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_12
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 420
+        width: 52
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d882399adb02a8fc0800000000000000
+      internalID: -3491942562106496883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_13
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 421
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4e0845b51e14360800000000000000
+      internalID: 7152245465617065159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_14
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 360
+        width: 38
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7422fa7338f203da0800000000000000
+      internalID: -5967217265644461497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_15
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 411
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29add3c2ec68da80800000000000000
+      internalID: -8441877780301502161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_16
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 119
+        width: 240
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413f23bb66b5de690800000000000000
+      internalID: -7571294901754465516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_17
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 365
+        width: 120
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d45fcee3866b150800000000000000
+      internalID: 5888008182306262426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_18
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 361
+        width: 117
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714b5a10dc04e8f50800000000000000
+      internalID: 6885512129536177175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_19
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 363
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59123845b3eb7df70800000000000000
+      internalID: 9212040724839866773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_20
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 359
+        width: 54
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c522801a48bfe22a0800000000000000
+      internalID: -6760189443580616100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_21
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 362
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47c37d93901a1770800000000000000
+      internalID: 8582190266095748941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_22
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 59
+        width: 120
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a5efc78a04e7a30800000000000000
+      internalID: 4214877393661090337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_23
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 360
+        width: 35
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfdba5bba1518b3b0800000000000000
+      internalID: -5496620140649071108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 299
+        width: 51
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3660c6f30831c60800000000000000
+      internalID: 7787709190537372651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_25
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 301
+        width: 61
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808b9d3fd7335a210800000000000000
+      internalID: 1343536679895021576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_26
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 359
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8a27dcf8ea06860800000000000000
+      internalID: 7521203310359128319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_27
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 301
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c0f9429d56f52d60800000000000000
+      internalID: 7864963206019150021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_28
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 302
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882d46107fd8880e0800000000000000
+      internalID: -2267406320361221496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_29
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 302
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cbe8bae66de71140800000000000000
+      internalID: 4690478563210095552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_30
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 301
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33906438a45126cc0800000000000000
+      internalID: -3719386932480440013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_31
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 301
+        width: 49
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b71c88e1d2c9ac0800000000000000
+      internalID: -3847150372514596045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_32
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 300
+        width: 50
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e87fd284035d70cd0800000000000000
+      internalID: -2591868657182312562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_33
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 303
+        width: 61
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de2dc451cf940da0800000000000000
+      internalID: -5979478752540938538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_34
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 300
+        width: 51
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee253c4819a4ada0800000000000000
+      internalID: -5934432487144608029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_35
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 301
+        width: 55
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f586f32f70d33d40800000000000000
+      internalID: 5563019209215477239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_36
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 239
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e001bd8f51d4daaf0800000000000000
+      internalID: -383565636491866098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_37
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 240
+        width: 35
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46677a8631379ee0800000000000000
+      internalID: -1254479860878318002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_38
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 179
+        width: 46
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553e54b202ea9a8f0800000000000000
+      internalID: -528700028051135659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_39
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 242
+        width: 56
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0149427b2d9675dc0800000000000000
+      internalID: -3650332619223821296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_40
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 179
+        width: 55
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342b4008b73f4e590800000000000000
+      internalID: -7645718555613941181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_41
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 240
+        width: 40
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad822184aaa3e52c0800000000000000
+      internalID: -4441047679512729382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_42
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 179
+        width: 53
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a100e9186155240800000000000000
+      internalID: 4779751325481048587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_43
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 241
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236a448a04de67c70800000000000000
+      internalID: 8968616569911682610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_44
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 239
+        width: 49
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a636f4c7dd493a3a0800000000000000
+      internalID: -6655312145329200278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_45
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 241
+        width: 43
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ef2996539d2bf90800000000000000
+      internalID: -6939245252396777928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_46
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 119
+        width: 118
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4830c63dd63ae8460800000000000000
+      internalID: 7245908542579540868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_47
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 120
+        width: 59
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552e7c0d6d1921a20800000000000000
+      internalID: 3031645850985554517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_48
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 184
+        width: 56
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c947ba62d2b6ad330800000000000000
+      internalID: 3736416682523718812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_49
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 179
+        width: 42
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ffec70959d07c940800000000000000
+      internalID: 5316232821159555065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_50
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 180
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe06d0283c78b6b0800000000000000
+      internalID: -5280333982580994369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_51
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 184
+        width: 59
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f576b694b7969c0800000000000000
+      internalID: -3933477244266651834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_52
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 129
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b4f81b92d7308f0800000000000000
+      internalID: -575478709347202217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_53
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 123
+        width: 119
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08d88a1902c17d30800000000000000
+      internalID: 4427533253037578251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_54
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 43
+        width: 176
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be0ff0335d280e50800000000000000
+      internalID: 6775715474706468537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_55
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 59
+        width: 60
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b08cab6f3d37fcd0800000000000000
+      internalID: -2524481723519172424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_56
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 124
+        width: 60
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b07a3ccfd2480320800000000000000
+      internalID: 2524341120112685235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 131
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231f37bc7bfa5ada0800000000000000
+      internalID: -5934143730063511246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_58
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 64
+        width: 60
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc4eb717136dfdf0800000000000000
+      internalID: -144850662172242726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_59
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 0
+        width: 61
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c9c114a02d41510800000000000000
+      internalID: 1519069915814599751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_60
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 0
+        width: 54
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9cf5de2c85f52450800000000000000
+      internalID: 6063522455754243231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_61
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 0
+        width: 243
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c2651939b552db0800000000000000
+      internalID: -4817343537046213542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_62
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 59
+        width: 57
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c28e4415dd122d0800000000000000
+      internalID: -3305117310395077558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dontstarve_63
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 37
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d39a977e9a00030800000000000000
+      internalID: 3458951325464214848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
